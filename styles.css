@@ -1,0 +1,475 @@
+/* General Styles */
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background-color: #c8c6c0;
+    color: #42392b;
+    text-align: center;
+
+    background-image: url("https://plus.unsplash.com/premium_photo-1683309565422-77818a287060?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cG9ydGZvbGlvJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100vh; 
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #695c4c; /* Background color of navigation bar */
+    position: fixed;
+    left: 0;
+    top: 150px; /* starting below the header */
+    width: 200px;
+    padding: 10px 0px;
+    margin-left: 5px;
+    border-radius: 50px;
+}
+
+nav .tab {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transition: background 0.3s, border-radius 0.3s;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px; /* Rounded corners */
+}
+
+nav .tab:hover, nav .tab.active {
+    background-color: #564a3b;
+    border-radius: 10px; /* More pronounced rounded corners */
+}
+
+/* Each section will be stacked vertically */
+.content {
+    display: block;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 50px; /* Space for the fixed header */
+}
+
+.content.active {
+    display: block;
+}
+
+/* About Me Section */
+#about {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#about-title {
+    background-color: #a99b8a;
+    padding: 20px 20px;
+    color: white;
+    border-radius: 10px;
+}
+
+#about-description {
+    background-color: #f8f1e9;
+    padding: 20px 20px;/* Places text below image */
+    border-radius: 15px;
+    display: inline-block;
+
+}
+#profile-image{
+    width: 40vh;
+    height: 50vh;
+    border: 7px solid #6b5e4e;
+    border-radius: 5px;
+}
+
+/*--------------Projects---------------*/
+.project-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures items wrap onto a new row */
+    justify-content: center; /* Centers items horizontally */
+    gap: 20px; /* Adds spacing between items */
+}
+
+.project-container div {
+    width: calc(50% - 20px); /* Ensures two items per row */
+    text-align: center; /* Centers text and image */
+    background-color: #f5f5f5; /* Light background for contrast */
+    padding: 15px;
+    border-radius: 10px; /* Makes the background rounded */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+.project-container img {
+    width: 100%; /* Makes images responsive */
+    max-width: 300px; /* Limits max size */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.project-container a {
+    display: block; /* Places text below image */
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #564a3b; /* Matches earthy color scheme */
+    text-decoration: none;
+}
+
+.project-container a:hover {
+    color: #8b7765; /* Slightly lighter brown on hover */
+}
+
+#project-desc {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 2;
+}
+
+#chocolate-pic {
+    border: solid 5px #cac3ba;
+}
+/* ---------------Resume --------------------- */
+#resume-image {
+    width: 50%;
+    height: 50%;
+    border: solid 4px #807264;
+    border-radius: 15px;
+
+}
+/* ---------------Section Styling---------------- */
+section {
+    padding: 30px 20px;
+    margin-top: 50px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 80px auto;
+    max-width: 800px;
+}
+
+#photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+/* 3D Contact Card */
+.contact-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.contact-card h2 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Contact Buttons */
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.linkedin {
+    background: #0077b5;
+    color: white;
+}
+
+.gmail {
+    background: #ea4335;
+    color: white;
+}
+
+.github {
+    background: #24292e;
+    color: white;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Skills Section */
+#technical-skills {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-top: 0;
+    padding-bottom: 10px;
+    padding-left: 2cm;
+    padding-right: 2cm;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: white;
+    gap: 20px;
+}
+
+#skills-title {
+    background-color: white;
+    border-radius: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2cm;
+    padding-right: 2cm;
+    display: inline-block;
+    box-shadow: 2px 2px 5px white;    
+}
+.skill {
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    transition: transform 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    background-color: #d7e7d8;
+    border-radius: 10px;
+}
+
+.skill i {
+    font-size: 40px;
+    color: #8cb38e;
+}
+
+.skill p {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+ /* Skills Section -- Skills Listing */
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: nowrap;
+}
+
+.card {
+    width: 130px;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: .6s cubic-bezier(.28, -0.03, 0, 0.99);
+    box-shadow: 0px 10px 30px -5px rgba(82, 9, 9, 0.8);
+}
+
+.row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.icon {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: auto;
+    font-size: 13px;
+    opacity: 1;
+}
+
+#skills-desc {
+    color: rgb(186, 233, 186);
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#skills-mini-title {
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+#one {
+    background-color: #564a3b;
+    /*background-image: url("https://images.hdqwalls.com/download/sunrise-landscape-minimalism-5k-ex-1920x1080.jpg")*/
+}
+
+#two {
+    background-color: #6b5e4e;
+    /*background-image: url("https://www.hdwallpapers.in/download/artistic_landscape_mountains_trees_sunset_purple_sky_background_minimalist_hd_minimalism-1280x720.jpg");*/
+}
+
+#three {
+    background-color: #807264;
+    /*background-image: url("https://rare-gallery.com/mocahbig/391766-mountain-minimalist-scenery-digital-art-4k-pc.jpg");*/
+}
+
+#four {
+    background-color: #958779;
+    /*background-image: url("https://images.hdqwalls.com/download/firewatch-forest-mountains-minimalism-4k-hb-2880x1800.jpg");*/
+}
+
+#five {
+    background-color: #aa9c8f;
+    /*background-image: url("https://w0.peakpx.com/wallpaper/16/77/HD-wallpaper-beautiful-minimalist-ultra-minimalist.jpg")*/
+}
+
+#six {
+    background-color: #bfb1a5;
+    /*background-image: url("https://i.pinimg.com/originals/5b/f0/f0/5bf0f08ac66a3f4110f108be840131d9.jpg")*/
+}
+
+.professional-card {
+    width: 200px;
+    height: 150px;
+    perspective: 1000px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.professional-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#d3cac1;
+    border-radius: 12px;
+    padding: 10px;
+}
+.card-back {
+    background: #807264;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+#professional-skills-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 50px;
+    font-weight: bold;
+    color: #333;
+}
+
+.professional-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.professional-wrapper .card {
+    background: #8b7765; /* Light blue for differentiation */
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.professional-wrapper .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    section {
+        max-width: 90%;
+    }
+    
+    #contact-links {
+        flex-direction: column;
+    }
+
+}
